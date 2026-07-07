@@ -23,10 +23,15 @@ This project was built using details and high-resolution media assets extracted 
 
 ```text
 Puffing - The Live Puff/
-├── index.html   # Main web structure & semantic layout
-├── style.css    # Clean vanilla styling, CSS variables, glassmorphism, responsive grids
-├── app.js       # Interactivity logic (mobile toggle, lightbox, menu filters, carousel)
-└── README.md    # This file
+├── index.html       # Main web structure & semantic layout
+├── README.md        # This file
+└── assets/          # Project assets
+    ├── css/
+    │   └── style.css # Clean styling, CSS variables, glassmorphism, responsive grids
+    ├── js/
+    │   └── app.js    # Interactivity logic (mobile toggle, lightbox, menu filters, carousel)
+    └── images/
+        └── favicon.svg # Custom brand favicon illustrating freshly baked puff pastry
 ```
 
 ---
