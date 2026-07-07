@@ -436,7 +436,7 @@ ul {
     color: var(--text-secondary);
 }
 
-.hero-wave {
+.hero-wave, .section-wave {
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -446,14 +446,14 @@ ul {
     z-index: 5;
 }
 
-.hero-wave svg {
+.hero-wave svg, .section-wave svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 60px;
 }
 
-.hero-wave .wave-fill {
+.hero-wave .wave-fill, .section-wave .wave-fill {
     fill: var(--bg-primary);
 }
 
@@ -579,8 +579,9 @@ ul {
    MENU SECTION
    ========================================== */
 .menu-section {
-    padding: 100px 0;
+    padding: 100px 0 140px 0;
     background-color: var(--bg-secondary);
+    position: relative;
 }
 
 .menu-controls {
@@ -1004,8 +1005,9 @@ ul {
    REVIEWS & TESTIMONIALS SECTION
    ========================================== */
 .reviews-section {
-    padding: 100px 0;
+    padding: 100px 0 140px 0;
     background-color: var(--bg-secondary);
+    position: relative;
 }
 
 .reviews-container {
