@@ -1563,3 +1563,94 @@ ul {
     .reviews-container { padding: 20px; }
     .message-form { padding: 20px; }
 }
+
+/* ==========================================
+   INTERACTIVE ANIMATIONS & WAVE MOTION
+   ========================================== */
+
+/* Animated Waves */
+.section-wave svg {
+    overflow: visible !important;
+}
+
+.wave-front {
+    animation: waveMoveFront 14s linear infinite;
+}
+
+.wave-back {
+    animation: waveMoveBack 22s linear infinite;
+}
+
+@keyframes waveMoveFront {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-1440px, 0, 0);
+    }
+}
+
+@keyframes waveMoveBack {
+    0% {
+        transform: translate3d(-1440px, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Scroll Reveal Base */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Delay Utilities */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Subtle floating animation for cards */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+.float-animation {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Steam animation for icons */
+.steam-container {
+    position: relative;
+}
+
+.steam-line {
+    position: absolute;
+    top: -8px;
+    width: 3px;
+    height: 12px;
+    background: var(--accent-gold);
+    opacity: 0;
+    border-radius: 50%;
+    filter: blur(1px);
+}
+
+.steam-line-1 { left: 35%; animation: steamMove 2s ease-in-out infinite 0.2s; }
+.steam-line-2 { left: 50%; animation: steamMove 2s ease-in-out infinite 0.8s; }
+.steam-line-3 { left: 65%; animation: steamMove 2s ease-in-out infinite 1.4s; }
+
+@keyframes steamMove {
+    0% { transform: translateY(0) scaleX(1); opacity: 0; }
+    30% { opacity: 0.5; }
+    60% { transform: translateY(-12px) scaleX(1.5); opacity: 0.3; }
+    100% { transform: translateY(-22px) scaleX(0.5); opacity: 0; }
+}
